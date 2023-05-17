@@ -3,17 +3,18 @@ kind: Deployment
 metadata:
   name: cardeployment
 spec:
-  matchLabels:
-    app: car
+  selector:
+    matchLabels:
+      app: car
   template:
-   metadata:
+    metadata:
       labels:
         app: car
-   spec:
-    containers:
-    - image: docker.io/devopschand/car
-      ports:
-      - containerPort: 80
+    spec:
+     containers:
+     - image: docker.io/devopschand/car
+       ports:
+       - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
