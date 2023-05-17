@@ -12,7 +12,8 @@ spec:
         app: car
     spec:
      containers:
-     - image: docker.io/devopschand/car
+     - name: carcontainer
+       image: docker.io/devopschand/car
        ports:
        - containerPort: 80
 ---
