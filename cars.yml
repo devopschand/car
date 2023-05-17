@@ -22,6 +22,8 @@ metadata:
    name: carservice
 spec:
   type: NodePort
+  selector:
+     app: car
   ports:
   - port: 80
     targetPort: 80
