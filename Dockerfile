@@ -1,2 +1,2 @@
 FROM docker.io/nginx:latest
-COPY car-repair-html-template/  /usr/share/nginx/html
+COPY maintenance.html  /usr/share/nginx/html
