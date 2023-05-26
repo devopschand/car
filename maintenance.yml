@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cardeploy
+  name: maintenancedeploy
 spec:
   selector:
     matchLabels:
@@ -12,7 +12,7 @@ spec:
         app: mm
     spec:
      containers:
-     - name: maintenance Page
+     - name: maintenancepage
        image: docker.io/devopschand/maintenance
        ports:
        - containerPort: 80
