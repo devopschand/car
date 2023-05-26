@@ -1,30 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cardeploy 
+  name: cardeploy
 spec:
   selector:
     matchLabels:
-      app: car
+      app: mm
   template:
     metadata:
       labels:
-        app: car
+        app: mm
     spec:
      containers:
-     - name: carcontainer
-       image: docker.io/devopschand/car
+     - name: maintenance Page
+       image: docker.io/devopschand/maintenance
        ports:
        - containerPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-   name: carservice
-spec:
-  type: NodePort
-  selector:
-     app: car
-  ports:
-  - port: 80
-    targetPort: 80
