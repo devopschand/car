@@ -13,6 +13,6 @@ spec:
     spec:
      containers:
      - name: maintenancepage
-       image: docker.io/devopschand/maintenance
+       image: docker.io/devopschand/maintenance:IMAGE_TAG
        ports:
        - containerPort: 80
